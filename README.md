@@ -41,3 +41,12 @@ https://github.com/netology-code/ahj-homeworks/tree/AHJ-50/workers
 Напоминаем, что для кэширования вы можете воспользоваться плагином Workbox.
 
 ---
+==================================
+npm run lint -- --fix
+
+git status
+git add -A
+git commit -m "commit 01.02"
+git push
+==================================
+---
