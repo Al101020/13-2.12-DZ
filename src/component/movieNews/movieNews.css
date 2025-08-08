@@ -1,0 +1,21 @@
+.divMovieNews {
+  width: 350px;
+  min-height: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.update {
+  position: relative;
+  left: 270px;
+  bottom: 5px;
+  /* right: 10px; */
+}
+
+.titleH4 {
+  position: relative;
+  bottom: 15px;
+  left: 10px;
+  margin: 0px;
+}

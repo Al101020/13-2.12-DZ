@@ -1,3 +1,7 @@
+import '../component/movieNews/movieNews';
+
+// console.log('ДЗ-Workers');
+
 if (window.Worker) {
   console.log('worker есть');
   // //   const worker = new Worker('../worker.js');
