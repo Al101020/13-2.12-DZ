@@ -1,7 +1,7 @@
 # Бейджик appveyor.com:
 [![Build status](https://ci.appveyor.com/api/projects/status/8mj6wkxyyvcyruys?svg=true)](https://ci.appveyor.com/project/Al101020/13-2-12-dz)
 # Ссылка на моё ДЗ
-<br>
+https://al101020.github.io/13-2.12-DZ/<br>
 
 # Ссылка на ДЗ:
 https://github.com/netology-code/ahj-homeworks/tree/AHJ-50/workers
