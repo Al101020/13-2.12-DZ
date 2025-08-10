@@ -41,6 +41,8 @@ https://github.com/netology-code/ahj-homeworks/tree/AHJ-50/workers
 Напоминаем, что для кэширования вы можете воспользоваться плагином Workbox.
 
 ---
+    команда запуск сервера:
+node server.js
 ==================================
 npm run lint -- --fix
 
@@ -50,3 +52,4 @@ git commit -m "commit 01.02"
 git push
 ==================================
 ---
+npm install mini.css

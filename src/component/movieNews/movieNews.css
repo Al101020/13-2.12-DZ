@@ -18,4 +18,50 @@
   bottom: 15px;
   left: 10px;
   margin: 0px;
+
+  font-weight: bold;
 }
+
+.movieNews {
+  padding: 5px;
+  margin: 2px; 
+}
+
+.time {
+  font-size: 13px;
+}
+
+.movie {
+  /* display: inline-block; */
+  /* border: 1px solid black; */
+  /* display: flex; */
+}
+
+.image {
+  display: inline-block;
+  width: 33px;
+  height: 30px;
+  background-image: url("aaa.png");
+  background-size: cover;
+}
+
+.divNameMovie {
+  display: inline-block;
+  width: 280px;
+}
+
+.nameMovie {
+  margin: 0 0 0 5px;
+  font-size: 13px;
+  font-weight: 500;
+  /* font-weight: bold; */
+  /* font-weight: bolder; */
+  /* border: 1px solid black; */
+}
+
+
+
+/* 
+width: 20px; 
+background-image: url("images/keks.jpg");  
+width: 600px; */
