@@ -22,20 +22,6 @@ app.use((req, res, next) => {
   next();
 });
 
-
-// const messages = [
-//   {
-//     "from": "anya@ivanova",
-//     "subject": "Hello from Anya",
-//     "time": "18:56 03.20.2019"
-//   },
-//   {
-//     "from": "alex@petrov",
-//     "subject": "Hello from Alex Petrov!",
-//     "time": "18:40 03.20.2019"
-//   }
-// ];
-
 const movies = [{
     'time': '18:04 25.03.2019',
     'title': `"Люди Икс: Тёмный феникс" - свой против своих. Показ стартует 7 июня`
@@ -50,60 +36,9 @@ const movies = [{
   }
 ]; 
 
-// // ----------------------------------------
-// - время и дата
-    function addZero(num) {  
-      if (num >= 0 && num <= 9) {  
-        return '0' + num;  
-      } else {  
-        return num;  
-      }  
-    }
-
-    function timeDate() {
-      let timeDate = new Date();
-      let year = timeDate.getFullYear();// год
-      let month = timeDate.getMonth() + 1;// месяц
-      let Day = timeDate.getDate();// число
-      let hours = timeDate.getHours();// часы
-      let minutes = timeDate.getMinutes();// минуты
-      // let seconds = timeDate.getSeconds();// секунды
-      // return addZero(hours) + ':' + addZero(minutes) + ':' + addZero(seconds) + ' ' + addZero(Day) + '.' + addZero(month) + '.' + year;
-      return addZero(hours) + ':' + addZero(minutes) + ' ' + addZero(Day) + '.' + addZero(month) + '.' + year;
-    }
-
-    // let num = 1;
-    // function hello() {
-      
-    //   return 'hello!!! - ' + (num += 1);
-    // }
-    // -
-
-// function incomingAdd() {  // let timeDate = new Date();
-
-//   if (messages.length < 7) {
-//     try {
-//       const inc =   {
-//         'from': 'anya@ivanova',
-//         'subject': hello(),         // 'subject': 'Hello!!!!!!!!!!!',
-//         'time': timeDate()         // 'time': '19:00 03.20.2019'
-//       }
-//       messages.push(inc);
-//     } catch (err) {console.log(err)}
-//   } else if (messages.length > 5) {
-//     messages.splice(2, 2);
-//   }
-// }
-
-// ---------
-// setTimeout(incomingAdd, 3000);
-// setInterval(incomingAdd, 5000);
-// // ----------------------------------------
-
 app.post('/movies', async (request, response) => {
 
-  if (request) {
-    // logger.error(`!!!!!!!!!!!!!!!!!!?????????????????`);
+  if (request) {    // logger.error(`!!!!!!!!!!!!!!!!!!?????????????????`);
     response.send(JSON.stringify(movies)).end();
   }
 });

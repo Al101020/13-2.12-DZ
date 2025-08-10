@@ -4733,11 +4733,6 @@ mini-css-extract-plugin@^2.9.2:
     schema-utils "^4.0.0"
     tapable "^2.2.1"
 
-mini.css@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.npmjs.org/mini.css/-/mini.css-3.0.1.tgz"
-  integrity sha512-FmuuBL0wuyDO1UA66TkAo8w2RxxuHmNPaUqUHcYlHtM9CJkrscQaNAJ/ParEahYFwtZOSgfEA7flbMoSPkzrPA==
-
 minimalistic-assert@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz"
