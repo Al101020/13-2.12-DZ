@@ -6,21 +6,12 @@ import express from "express";
 import pino from "pino";
 import pinoPretty from "pino-pretty";
 
+import slowDown from 'express-slow-down';
+
 const app = express();
 const logger = pino(pinoPretty());
 
-app.use(cors());
-app.use(
-  bodyParser.json({
-    type(req) {
-      return true;
-    },
-  })
-);
-app.use((req, res, next) => {
-  res.setHeader("Content-Type", "application/json");
-  next();
-});
+
 
 const movies = [{
     'time': '18:04 25.03.2019',
@@ -34,7 +25,30 @@ const movies = [{
     'time': '18:04 19.03.2019',
     'title': `"Мстители 4: Финал" показ стартует 25 апреля`
   }
-]; 
+];
+
+const apiLimiter = slowDown({
+    windowMs: 5 * 60 * 1000,  // 5 minutes
+    delayAfter: 1,              // Allow only one request at full speed
+    // delayMs: hits => hits * hits * 1000 // Exponential delay
+    delayMs: hits => hits * 1000 // Exponential delay
+});
+
+
+
+app.use(cors());
+app.use(
+  bodyParser.json({
+    type(req) {
+      return true;
+    },
+  })
+);
+app.use((req, res, next) => {
+  res.setHeader("Content-Type", "application/json");
+  next();
+});
+app.use('/movies', apiLimiter);
 
 app.post('/movies', async (request, response) => {
 
@@ -42,6 +56,17 @@ app.post('/movies', async (request, response) => {
     response.send(JSON.stringify(movies)).end();
   }
 });
+
+
+// app.post('/movies', async (request, response) => { // работает
+
+//   if (request) {    // logger.error(`!!!!!!!!!!!!!!!!!!?????????????????`);
+//     response.send(JSON.stringify(movies)).end();
+//   }
+// });
+
+
+
 
 
 const server = http.createServer(app);

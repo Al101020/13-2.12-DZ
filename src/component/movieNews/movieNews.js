@@ -16,8 +16,7 @@ document.body.append(divMovieNews);
 
 const update = divMovieNews.querySelector('.update');
 
-update.addEventListener('click', () => {
-  console.log('click');
+update.addEventListener('click', () => { // console.log('click');
   window.location.reload();
 });
 
