@@ -1,10 +1,40 @@
 import '../component/movieNews/movieNews';
 
-// console.log('ДЗ-Workers');
+if ('serviceWorker' in navigator) {
+  console.log('SW в navigator есть');
+  navigator.serviceWorker.register('./service-worker', { scope: './' })
+    .then((reg) => {
+      // регистрация сработала
+      console.log(`Registration succeeded. Scope is ${reg.scope}`);
+    }).catch((error) => {
+      // регистрация прошла неудачно
+      console.log(`Registration failed with ${error}`);
+    });
+}
 
-// if (window.Worker) {
-//   console.log('worker есть');
-//   // //   const worker = new Worker('../worker.js');
-//   // const worker = new Worker('http://localhost:8082/src/worker.js');
-//   // console.log(worker);
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./src/service-worker.js', { scope: './' })
+    .then((reg) => {
+      // регистрация сработала
+      console.log(`Registration succeeded. Scope is ${reg.scope}`);
+    }).catch((error) => {
+      // регистрация прошла неудачно
+      console.log(`Registration failed with ${error}`);
+    });
+}
+
+// if (navigator.serviceWorker) {
+//   window.addEventListener('load', async () => {
+//     try {
+//       if (navigator.serviceWorker) {
+//         await navigator.serviceWorker.register(
+//           '/src/service.worker.js',
+//         );
+//         console.log('sw registered');
+//       }
+//       // await registration.unregister();
+//     } catch (e) {
+//       console.log(e);
+//     }
+//   });
 // }

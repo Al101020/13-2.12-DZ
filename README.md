@@ -53,3 +53,19 @@ git push
 ==================================
 ---
 npm install mini.css
+    потом удалил из файла package.json, но скопировал файл mini-default.min.css в папку css
+и подключил его в index.js
+
+2025.08.12
+---    Установил пакет workbox для кэширования:
+npm install --save-dev workbox-webpack-plugin
+
+---    в файле webpack.config.js добавил после строки"module.exports = {":
+    ...
+  entry: {  
+    main: './src/js/app.js',  
+    serviceWorker: './src/service-worker.js'  
+  },...
+
+--- создал файл service-worker.js в каталоге src
+--- после этого показалась в консоли надпись написанная в файле service-worker.js

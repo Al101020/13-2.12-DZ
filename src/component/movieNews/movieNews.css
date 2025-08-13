@@ -39,14 +39,16 @@
 
 .image {
   display: inline-block;
-  width: 33px;
-  height: 30px;
+  width: 35px;
+  height: 32px;
   background-image: url("aaa.png");
   background-size: cover;
+  margin-right: 10px;
 }
 
 .divNameMovie {
   display: inline-block;
+  vertical-align: top;
   width: 280px;
 }
 
