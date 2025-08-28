@@ -1,5 +1,9 @@
 console.log('service-worker.js');
 
+
+
+
+
 // if ('serviceWorker' in navigator) {
 //   console.log('SW в navigator есть')
 //   navigator.serviceWorker.register('./service-worker', {scope: './'})
