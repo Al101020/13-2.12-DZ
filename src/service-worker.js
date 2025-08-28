@@ -14,4 +14,5 @@ console.log('service-worker.js');
 //           // регистрация прошла неудачно
 //     console.log('Registration failed with ' + error);
 //   });
-// }
+// } 
+
