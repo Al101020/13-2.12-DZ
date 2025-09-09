@@ -69,3 +69,28 @@ npm install --save-dev workbox-webpack-plugin
 
 --- создал файл service-worker.js в каталоге src
 --- после этого показалась в консоли надпись написанная в файле service-worker.js
+
+
+2025.09.09
+в браузере на http://localhost:8080/ в в DevTools → Application(Приложение) нажал отменить регистрацию.
+-- В файле webpack.config.js вернул порт 8080 и поменял настройки как у преподавателя.
+-- остановил C:\_GitHub_\13-2.12-DZ dev-server:
+Ctrl + c
+-- и снова запустил(типа перезапустил):
+npm start
+
+-- Страница открылась и в DevTools: 
+    Консль: 
+      service-worker.js:1 service-worker.js
+      Registration succeeded. Scope is http://localhost:8080/
+    Источники: 
+      шестеренка и service-worker.js
+  короче сервис воркер запустился(регистрацию прошёл).
+==================================
+npm run lint -- --fix
+
+git status
+git add -A
+git commit -m "commit 01.02"
+git push
+==================================
