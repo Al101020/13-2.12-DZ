@@ -35,7 +35,6 @@ const apiLimiter = slowDown({
 });
 
 
-
 app.use(cors());
 app.use(
   bodyParser.json({
@@ -56,17 +55,6 @@ app.post('/movies', async (request, response) => {
     response.send(JSON.stringify(movies)).end();
   }
 });
-
-
-// app.post('/movies', async (request, response) => { // работает
-
-//   if (request) {    // logger.error(`!!!!!!!!!!!!!!!!!!?????????????????`);
-//     response.send(JSON.stringify(movies)).end();
-//   }
-// });
-
-
-
 
 
 const server = http.createServer(app);

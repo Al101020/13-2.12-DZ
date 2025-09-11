@@ -1,9 +1,12 @@
-// const body = document.querySelector('body');
-
 export default function showNews(fetchData) {
   const divMovieNews = document.querySelector('.divMovieNews');//   console.log(divMovieNews);
+  const divDownload = document.querySelector('.divDownload'); // console.log(divDownload);
 
-  for (let i = 0; i < fetchData.length; i += 1) { // console.log(fetchData[i].time);
+  for (let i = 0; i < fetchData.length; i += 1) {
+    divDownload.classList.remove('divDownload');
+    divDownload.classList.add('displayNone');
+
+    // console.log(fetchData[i].time);
     const movieNews = document.createElement('div');
     movieNews.classList.add('movieNews');
     divMovieNews.appendChild(movieNews);

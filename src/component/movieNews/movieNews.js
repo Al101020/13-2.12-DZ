@@ -1,7 +1,7 @@
 import './movieNews.css';
 
-// import http from "node:http";
 import showNews from './showNews';
+import showError from './showError';
 
 const divMovieNews = document.createElement('div');
 divMovieNews.classList.add('divMovieNews');
@@ -10,8 +10,13 @@ divMovieNews.innerHTML = '<a href="#" class="update">Обновить</a>';
 const titleH4 = document.createElement('h4');
 titleH4.classList.add('titleH4');
 titleH4.textContent = 'Новости мира кино';
-
 divMovieNews.append(titleH4);
+
+const divDownload = document.createElement('div');
+divDownload.textContent = 'Загрузка новостей ...';
+divDownload.classList.add('divDownload');
+divMovieNews.append(divDownload);
+
 document.body.append(divMovieNews);
 
 const update = divMovieNews.querySelector('.update');
@@ -33,6 +38,8 @@ fetch('http://localhost:7070/movies', {
 }).then((value) => { // console.log(value);
   fetchData = value;
   showNews(fetchData);
-}).catch((error) => {
+}).catch((error) => { // если ошибка
+  showError();
+
   console.log('Ошибка:', error);
 });
