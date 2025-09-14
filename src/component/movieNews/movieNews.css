@@ -57,11 +57,18 @@
   font-size: 13px;
 }
 
-.movie {
+.time_ {
+  width: 95px;
+  height: 14px;
+  background-color: gray;
+  margin-bottom: 2px;
+}
+
+/* .movie { */
   /* display: inline-block; */
   /* border: 1px solid black; */
   /* display: flex; */
-}
+/* } */
 
 .image {
   display: inline-block;
@@ -70,12 +77,6 @@
   background-image: url("aaa.png");
   background-size: cover;
   margin-right: 10px;
-}
-
-.divNameMovie {
-  display: inline-block;
-  vertical-align: top;
-  width: 280px;
 }
 
 .nameMovie {
@@ -87,6 +88,27 @@
   /* border: 1px solid black; */
 }
 
+.divNameMovie {
+  display: inline-block;
+  vertical-align: top;
+  width: 280px;
+}
+
+.nameMovie_row1 {
+  display: inline-block;
+  margin: 1px 2px 0 0;
+  width: 200px;
+  height: 12px;
+  background-color: gray;
+}
+
+.nameMovie_row2 {
+  display: inline-block;
+  margin: 1px 2px 0 0;
+  width: 150px;
+  height: 12px;
+  background-color: gray;
+}
 
 
 /* 

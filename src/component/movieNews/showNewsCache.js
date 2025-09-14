@@ -1,25 +1,19 @@
-export default function showNews(fetchData) {
+export default function showNewsCache() {
+  // console.log('showNewsCache');
   const divMovieNews = document.querySelector('.divMovieNews');//   console.log(divMovieNews);
   // const divDownload = document.querySelector('.divDownload'); // console.log(divDownload);
 
-  const movieNewsAll = document.querySelectorAll('.movieNews');
-  // console.log(movieNewsAll);
-  for (let i = 0; i < movieNewsAll.length; i += 1) {
-    movieNewsAll[i].remove();
-  }
+  // divDownload.classList.remove('divDownload');
+  // divDownload.classList.add('displayNone');
 
-  for (let i = 0; i < fetchData.length; i += 1) {
-    // divDownload.classList.remove('divDownload');
-    // divDownload.classList.add('displayNone');
-
-    // console.log(fetchData[i].time);
+  for (let i = 0; i < 3; i += 1) {
     const movieNews = document.createElement('div');
     movieNews.classList.add('movieNews');
     divMovieNews.appendChild(movieNews);
 
     const time = document.createElement('div');
-    time.classList.add('time');
-    time.textContent = fetchData[i].time;
+    time.classList.add('time_');
+    // time.textContent = fetchData[i].time;
     movieNews.appendChild(time);
 
     const movie = document.createElement('div');
@@ -34,9 +28,12 @@ export default function showNews(fetchData) {
     divNameMovie.classList.add('divNameMovie');
     movie.appendChild(divNameMovie);
 
-    const nameMovie = document.createElement('div');
-    nameMovie.classList.add('nameMovie');
-    nameMovie.textContent = fetchData[i].title;
-    divNameMovie.appendChild(nameMovie);
+    const nameMovieRow1 = document.createElement('div');
+    nameMovieRow1.classList.add('nameMovie_row1');
+    divNameMovie.appendChild(nameMovieRow1);
+
+    const nameMovieRow2 = document.createElement('div');
+    nameMovieRow2.classList.add('nameMovie_row2');
+    divNameMovie.appendChild(nameMovieRow2);
   }
 }
