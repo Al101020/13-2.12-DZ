@@ -49,13 +49,19 @@ app.use((req, res, next) => {
 });
 app.use('/movies', apiLimiter);
 
-app.post('/movies', async (request, response) => {
+// app.post('/movies', async (request, response) => {
 
-  if (request) {    // logger.error(`!!!!!!!!!!!!!!!!!!?????????????????`);
+//   if (request) {    // logger.error(`!!!!!!!!!!!!!!!!!!?????????????????`);
+//     response.send(JSON.stringify(movies)).end();
+//   }
+// });
+
+app.get('/movies', async (request, response) => {
+
+  if (request) {
     response.send(JSON.stringify(movies)).end();
   }
 });
-
 
 const server = http.createServer(app);
 

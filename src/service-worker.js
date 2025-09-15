@@ -11,12 +11,13 @@ self.addEventListener('install', (event) => {
           '/',
           '/index.html',
           // './node_modules/mini.css/dist/mini-default.min.css',
+          // './css/mini-default.min.css',
           // './css/style.css',
           // '/component/movieNews/aaa.png',
-        ]);
-      }),
+        ])
+      })
 
-  );
+  )
   //   event.open('my-cache')
   //     .then((cache) => {
   //       cache.addAll([
