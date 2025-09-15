@@ -14,10 +14,10 @@ self.addEventListener('install', (event) => {
           // './css/mini-default.min.css',
           // './css/style.css',
           // '/component/movieNews/aaa.png',
-        ])
-      })
+        ]);
+      }),
 
-  )
+  );
   //   event.open('my-cache')
   //     .then((cache) => {
   //       cache.addAll([

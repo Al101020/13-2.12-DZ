@@ -49,15 +49,15 @@ let fetchData = null;
 // });
 
 fetch('http://localhost:7070/movies', {
-    method: 'GET',
-    headers: { 'Content-Type': 'application/json' }
-  }).then((response) => {
+  method: 'GET',
+  headers: { 'Content-Type': 'application/json' },
+}).then((response) => {
   if (response.ok) {
     // console.log(response.ok);
     return response.json();
   }
   throw new Error(`Ошибка загрузки данных: ${response.status}`);
-}).then((value) => {   // console.log('Valiu_: ' + value);
+}).then((value) => { // console.log('Valiu_: ' + value);
   fetchData = value;
   showNews(fetchData);
 }).catch((error) => { // если ошибка
