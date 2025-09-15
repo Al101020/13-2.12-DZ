@@ -1,6 +1,6 @@
 console.log('service-worker.js');
 
-self.addEventListener('install', (event) => {
+window.self.addEventListener('install', (event) => {
 // this.addEventListener('install', (event) => {
   console.log('Установлен');
 
@@ -31,10 +31,10 @@ self.addEventListener('install', (event) => {
 //     })
 });
 
-self.addEventListener('activate', () => {
+window.self.addEventListener('activate', () => {
   console.log('Активирован');
 });
 
-self.addEventListener('fetch', () => {
+window.self.addEventListener('fetch', () => {
   console.log('Происходит запрос на сервер');
 });
