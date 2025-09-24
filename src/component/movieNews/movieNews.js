@@ -49,6 +49,7 @@ let fetchData = null;
 // });
 
 fetch('http://localhost:7070/movies', {
+  cache: 'no-store',
   method: 'GET',
   headers: { 'Content-Type': 'application/json' },
 }).then((response) => {

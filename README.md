@@ -103,3 +103,26 @@ showError.js
 -- Сперва появляется(movieNews.js): 'Загрузка новостей ...', потом загружается список новостей. Если fetch возвращает ошибку(или сервер останавливаю), то выводится(showError.js): 'Не удалось загрузить данные\nПроверте подключение\nи обновите страницу'.
 -- 
 
+
+------------
+ 2025.09.22
+ ------------
+	слово windows убрал,
+	ошибка в браузере ушла,
+	ошибка при проверки npm run lint -- --fix, осталась:
+5:1  error    Unexpected use of 'self'      no-restricted-globals.
+
+------------
+ 2025.09.23
+ ------------
+  -  Использование workbox-webpack-plugin
+Установка:
+yarn add -D workbox-webpack-plugin
+или
+npm install --save-dev workbox-webpack-plugin
+
+Вам нужно будет удалить ваш service-worker.js файл или сильно его упростить. Workbox сгенерирует его за вас.
+
+Изменение webpack.config.js:
+в plugins добавьте workbox-webpack-plugin.
+
